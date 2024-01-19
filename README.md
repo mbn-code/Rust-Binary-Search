@@ -2,7 +2,7 @@
 
 This repository contains a simple implementation of the binary search algorithm in Rust, showcasing its functionality and providing a basic understanding of how the algorithm works.
 
-If you don't want to look at the code or you don't have rust compiler installed and just wants to see what the program does go [Here]() for the pre-compiled binaries
+If you don't want to look at the code or you don't have rust compiler installed and just wants to see what the program does go [Here](https://github.com/CollinEdward/Rust-Binary-Search/releases/tag/Rust) for the pre-compiled binaries
 
 ## Table of Contents
 
