@@ -1,6 +1,6 @@
 use std::time::Instant;
 use druid::widget::{Align, Flex, Label};
-use druid::{AppLauncher, Data, Env, Lens, LocalizedString, Widget, WindowDesc, WidgetExt};
+use druid::{AppLauncher, Data, Env, Lens, LocalizedString, Widget, WindowDesc};
 
 const VERTICAL_WIDGET_SPACING: f64 = 20.0;
 const WINDOW_TITLE: LocalizedString<HelloState> = LocalizedString::new("Binary Search Algorithm");
@@ -69,7 +69,7 @@ fn main() {
         99, 100];
 
     // Specify the target integer to search for.
-    let target = 45;
+    let target = 20;
 
     // create the initial app state
     let mut initial_state = HelloState {
