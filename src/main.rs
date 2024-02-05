@@ -32,23 +32,30 @@ fn binary_search(
         // Retrieve the value at the middle index.
         let guess: i32 = array1[mid];
 
-        let label_array: String = "[1..=100]".into();
+        // Update label_array1 with the current search range
+        state.label_array1 = format!("[{}..={}]", low, high);
 
         // Check if the guess is equal to the target.
         if guess == target {
             // Update label_array1 with search information for GUI display
             state.label_array1 = format!(
                 "Search Results:\n----------------\narray1: {:?}\nmid: {}\nlow: {}\nhigh: {}\ntarget: {}\nguess: {}\nresult: {:?}\nDid I get it right? : {}",
-                label_array, mid, low, high, target, guess, result, guess == target, 
+                array1, mid, low, high, target, guess, result, guess == target, 
             );
             // Exit the loop as the target is found.
             break;
-        } else if guess > target {
-            // Adjust the search space to the left.
-            high = mid - 1;
         } else {
-            // Adjust the search space to the right.
-            low = mid + 1;
+            match guess.cmp(&target) {
+                std::cmp::Ordering::Greater => {
+                    // Adjust the search space to the left.
+                    high = mid - 1;
+                }
+                std::cmp::Ordering::Less => {
+                    // Adjust the search space to the right.
+                    low = mid + 1;
+                }
+                std::cmp::Ordering::Equal => unreachable!(),
+            }
         }
     }
 }

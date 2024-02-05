@@ -6,8 +6,4 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-<<<<<<< Updated upstream
-druid = { version = "0.8.3", features = ["im", "svg", "image"] }
-=======
 druid = "0.8.3"
->>>>>>> Stashed changes
