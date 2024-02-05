@@ -1,3 +1,5 @@
+mod GUI;
+
 use std::time::Instant;
 use druid::widget::{Align, Flex, Label};
 use druid::{AppLauncher, Data, Env, Lens, LocalizedString, Widget, WindowDesc};
